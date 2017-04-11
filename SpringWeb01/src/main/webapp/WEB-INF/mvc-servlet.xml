@@ -5,6 +5,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="/hello.controller" class="controller.HelloController" />
+    <bean id="helloController" class="controller.HelloController" />
 
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="urlMap">
+            <map>
+                <entry key="/hello.controller" value="helloController" />
+            </map>
+        </property>
+    </bean>
 </beans>
