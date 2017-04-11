@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 此檔案名稱需對應 web.xml 中 org.springframework.web.servlet.DispatcherServlet servlet-name 標籤名稱 -->
+<!-- 此例 servlet-name 為 mvc，故為 mvc-servlet.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="/hello.controller" class="controller.HelloController" />
+
+</beans>
