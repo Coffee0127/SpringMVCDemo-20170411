@@ -14,4 +14,9 @@
             </map>
         </property>
     </bean>
+
+    <bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+        <property name="basename" value="bundle.views" />
+        <property name="order" value="5" />
+    </bean>
 </beans>

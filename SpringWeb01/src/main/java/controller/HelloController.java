@@ -29,7 +29,7 @@ public class HelloController extends AbstractController {
         if(errors!=null && !errors.isEmpty()) {
 //            request.getRequestDispatcher(
 //                    "/form.jsp").forward(request, response);
-            return new ModelAndView("/form.jsp");
+            return new ModelAndView("error");
         }
 
         //呼叫Model，根據執行結果導向View
