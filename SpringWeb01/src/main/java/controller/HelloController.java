@@ -38,7 +38,7 @@ public class HelloController extends AbstractController {
 
 //        String path = request.getContextPath();
 //        response.sendRedirect(path+"/success.jsp");
-        return new ModelAndView("/success.jsp");
+        return new ModelAndView("success");
     }
 
 }
