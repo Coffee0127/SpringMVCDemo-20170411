@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h3>Form</h3>
+<h3>Form (via ViewResolver)</h3>
 
 <form action="<c:url value="/hello.controller" />">
 	<table>

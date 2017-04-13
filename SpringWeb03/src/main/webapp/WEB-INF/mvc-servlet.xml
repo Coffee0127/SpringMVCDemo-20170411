@@ -7,4 +7,5 @@
 
     <context:component-scan base-package="controller" />
 
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver" />
 </beans>

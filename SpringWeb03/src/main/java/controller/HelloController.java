@@ -26,15 +26,13 @@ public class HelloController {
         }
 
         if (errors != null && !errors.isEmpty()) {
-            return "/form.jsp";
+            return "form.error";
         }
 
         // 呼叫Model，根據執行結果導向View
         // 使用 @SessionAttributes 將其放入 session 中
         model.addAttribute("name", name);
 
-//        String path = request.getContextPath();
-//        response.sendRedirect(path+"/success.jsp");
-        return "/success.jsp";
+        return "form.success";
     }
 }
