@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<h3>Success ${name}</h3>
+<h3>Success requestScope=${requestScope.name}</h3>
+<h3>Success sessionScope=${sessionScope.name}</h3>
 
 </body>
 </html>
