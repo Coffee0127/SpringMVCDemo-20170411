@@ -7,7 +7,14 @@
 
     <bean id="helloController" class="controller.HelloController" />
 
+    <bean id="demoInterceptor" class="controller.DemoInterceptor" />
+
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="interceptors">
+            <list>
+                <ref bean="demoInterceptor" />
+            </list>
+        </property>
         <property name="urlMap">
             <map>
                 <entry key="/hello.controller" value="helloController" />
@@ -23,5 +30,5 @@
     <bean class="org.springframework.web.servlet.view.XmlViewResolver">
         <property name="location" value="/WEB-INF/xml-views.xml" />
         <property name="order" value="3" />
-    </bean>    
+    </bean>
 </beans>
