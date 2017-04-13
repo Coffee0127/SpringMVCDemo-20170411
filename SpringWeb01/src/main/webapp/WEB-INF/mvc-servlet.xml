@@ -19,4 +19,9 @@
         <property name="basename" value="bundle.views" />
         <property name="order" value="5" />
     </bean>
+
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location" value="/WEB-INF/xml-views.xml" />
+        <property name="order" value="3" />
+    </bean>    
 </beans>

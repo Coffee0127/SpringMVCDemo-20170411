@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- id 為元件邏輯名稱 -->
+    <bean id="success" class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/xml/success.jsp" />
+        <property name="contextRelative" value="true" />
+    </bean>
+
+</beans>
