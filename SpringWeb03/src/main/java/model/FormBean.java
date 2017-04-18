@@ -4,7 +4,7 @@ public class FormBean {
 
     private String name;
     private java.util.Date date;
-    private java.lang.Integer number;
+    private int number;
 
     public String getName() {
         return name;
@@ -22,11 +22,11 @@ public class FormBean {
         this.date = date;
     }
 
-    public java.lang.Integer getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(java.lang.Integer number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

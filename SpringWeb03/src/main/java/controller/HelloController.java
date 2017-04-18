@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
-import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import beans.propertyeditors.PrimitiveNumberEditor;
 import model.FormBean;
 
 @Controller
@@ -30,9 +30,9 @@ public class HelloController {
                 new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true);
         webDataBinder.registerCustomEditor(Date.class, dateEditor);
 
-        CustomNumberEditor numberEditor =
-                new CustomNumberEditor(Integer.class, true);
-        webDataBinder.registerCustomEditor(Integer.class, numberEditor);
+        PrimitiveNumberEditor numberEditor =
+                new PrimitiveNumberEditor(Integer.class, true);
+        webDataBinder.registerCustomEditor(int.class, numberEditor);
     }
 
     @RequestMapping(method = { RequestMethod.GET })
