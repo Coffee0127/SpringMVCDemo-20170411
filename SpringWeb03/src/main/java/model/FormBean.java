@@ -3,8 +3,8 @@ package model;
 public class FormBean {
 
     private String name;
-    private String date;
-    private String number;
+    private java.util.Date date;
+    private java.lang.Integer number;
 
     public String getName() {
         return name;
@@ -14,19 +14,19 @@ public class FormBean {
         this.name = name;
     }
 
-    public String getDate() {
+    public java.util.Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(java.util.Date date) {
         this.date = date;
     }
 
-    public String getNumber() {
+    public java.lang.Integer getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(java.lang.Integer number) {
         this.number = number;
     }
 
