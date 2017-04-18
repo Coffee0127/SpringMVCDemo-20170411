@@ -14,5 +14,13 @@
     <mvc:interceptors>
         <!-- 作用在所有 @Controller -->
         <bean class="controller.DemoInterceptor" />
+        <!-- 
+        <mvc:interceptor>
+            作用在 /xxx 底下、/xxx/path1 以外的 @Controller
+            <mvc:mapping path="/xxx"/>
+            <mvc:exclude-mapping path="/xxx/path1"/>
+            <bean class="controller.DemoInterceptor" />
+        </mvc:interceptor>
+         -->
     </mvc:interceptors>
 </beans>
