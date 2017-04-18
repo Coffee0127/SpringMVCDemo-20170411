@@ -10,13 +10,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import model.FormBean;
+
 @Controller
 @RequestMapping(path = { "/hello.controller" })
 @SessionAttributes(names = { "name" })
 public class HelloController {
 
     @RequestMapping(method = { RequestMethod.GET })
-    public String method(@RequestParam String name, Model model) {
+    public String method(@RequestParam String name, Model model,
+            FormBean bean) {
+
+        System.out.println(bean);
+
         // 驗證資料
         Map<String, String> errors = new HashMap<>();
         model.addAttribute("errors", errors);

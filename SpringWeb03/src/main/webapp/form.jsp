@@ -19,6 +19,16 @@
 			<td>${errors.name}</td>
 		</tr>
 		<tr>
+			<td>Date:</td>
+			<td><input type="date" name="date"></td>
+			<td>${errors.date}</td>
+		</tr>
+		<tr>
+			<td>Number:</td>
+			<td><input type="number" name="number"></td>
+			<td>${errors.number}</td>
+		</tr>
+		<tr>
 			<td></td>
 			<td><input type="submit"></td>
 			<td></td>
