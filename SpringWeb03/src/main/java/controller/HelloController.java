@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import beans.propertyeditors.PrimitiveNumberEditor;
 import model.FormBean;
+import service.TestService;
 
 @Controller
 @RequestMapping(path = { "/hello.controller" })
@@ -36,10 +38,13 @@ public class HelloController {
         webDataBinder.registerCustomEditor(int.class, numberEditor);
     }
 
+    @Autowired
+    private TestService service;
+
     @RequestMapping(method = { RequestMethod.GET })
     public String method(FormBean bean, BindingResult bindingResult, Model model,
             @RequestAttribute(name = "demo") String demo) {
-
+        System.out.println(service);
         System.out.println("bean=" + bean);
         System.out.println("BindingResult=" + bindingResult);
         System.out.println("demo=" + demo);
