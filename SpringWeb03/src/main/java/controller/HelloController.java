@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -36,10 +37,12 @@ public class HelloController {
     }
 
     @RequestMapping(method = { RequestMethod.GET })
-    public String method(FormBean bean, BindingResult bindingResult, Model model) {
+    public String method(FormBean bean, BindingResult bindingResult, Model model,
+            @RequestAttribute(name = "demo") String demo) {
 
         System.out.println("bean=" + bean);
         System.out.println("BindingResult=" + bindingResult);
+        System.out.println("demo=" + demo);
 
         // 驗證資料
         Map<String, String> errors = new HashMap<>();
